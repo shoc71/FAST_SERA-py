@@ -1,5 +1,6 @@
 # Imports
 import os
+from assets.SERA.add import Add_Data
 
 DIRECTORY_PATH = os.path.dirname(os.path.realpath(__file__))
 DATA_TXT_DIRECTORY_PATH = f"{DIRECTORY_PATH}/assets/data/data.txt"
@@ -7,8 +8,6 @@ DATA_TXT_DIRECTORY_PATH = f"{DIRECTORY_PATH}/assets/data/data.txt"
 with open (DATA_TXT_DIRECTORY_PATH, 'r', encoding='utf-8', errors="ignore") as file:
     line = file.readline()
     main_data = eval(line) # expected return to be a single line of string
-
-
 
 class Search_Data:
     pass
@@ -18,29 +17,6 @@ class Edit_Data:
 
 class Remove_Data:
     pass
-
-class Add_Data:
-    def __init__(self, storage) -> None:
-        self.storage = storage
-        pass
-
-    def add_key(self, user_input_keys, user_input_values):
-        try:
-            # If the key already exists, append the new value
-            self.storage[user_input_keys].append(user_input_values)
-        except KeyError:
-            # If the key doesn't exist, create a new entry
-            self.storage[user_input_keys] = user_input_values
-        
-        return self.storage
-
-    def add_tags(self, user_input_keys, user_input_values):
-        try:
-            self.storage[user_input_keys].append(user_input_values)
-        except KeyError:
-            self.storage[user_input_keys] = [user_input_values]
-        
-        return self.storage
 
 class Program:
     def __init__(self) -> None:
