@@ -1,0 +1,13 @@
+add the following:
+
+- user (who is logged in)
+- author (who created the note)
+- Security Permission (depending on login, are you allowed to rwx the file)
+- timestamps (created and modified, add all cases)
+- backups (log for each backup)
+- personal_notes (by author, a list that is timestamped)
+- tags (by author)
+- personal_notes (by user, anyone that has access to either see/read/edit for them to add - if permission is removed in the future, then their note becomes inaccessable)
+- tags (by user)
+
+
